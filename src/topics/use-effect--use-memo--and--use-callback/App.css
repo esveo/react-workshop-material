@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Iceland');
+
+.satellite-control-app {
+  align-items: stretch;
+  background: #20212c;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Iceland', cursive;
+  font-size: 24px;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.satellite-control-app > div {
+  border-right: thin solid #545772;
+  flex: 1 1 0;
+}
+
+.satellite-control-app .satellite-select {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  flex: 0 0 auto;
+}
+
+.satellite-details {
+  padding: 5px 10px;
+}
+
+.satellite-visualisation {
+  height: 100%;
+  flex: 1 1 0;
+  overflow: hidden;
+}
