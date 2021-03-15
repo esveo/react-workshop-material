@@ -24,6 +24,8 @@ for (const app of apps) {
 
 const config = {};
 
+config.devtool = "eval-source-map";
+
 config.entry = entries;
 
 config.output = {

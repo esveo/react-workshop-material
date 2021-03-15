@@ -5,12 +5,19 @@
   background: #20212c;
   color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: 'Iceland', cursive;
   font-size: 24px;
   height: 100%;
   overflow: hidden;
   user-select: none;
+}
+
+.satellite-main {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .satellite-control-app > div {
@@ -23,7 +30,7 @@
   flex-direction: column;
   overflow: hidden;
   height: 100%;
-  flex: 0 0 auto;
+  flex: 0 0 20rem;
 }
 
 .satellite-details {

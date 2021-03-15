@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import { Button } from "./Button";
+import { Button } from "../base-components/Button";
 import { Satellite, SatelliteCreateInput, SatelliteType } from "./satelliteApi";
 import "./SatelliteForm.css";
 

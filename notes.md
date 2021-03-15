@@ -10,17 +10,9 @@ All Advanced topic modules are based on the result of the basics module and bran
 
 Clock with useInterval (useEffect to specify interval with delay and callback)
 
-### React Context
-
-Satellites state mit custom hooks. Sonst prop drilling
-
 ### useReducer (+ immer)
 
 Satellites state. Not only list of satellite (ids) but also satellites by id.
-
-### useRef + useImperativeHandle
-
-SatellitesSelect scrollToItem/scrollToRow
 
 ### RenderProps
 

@@ -1,7 +1,7 @@
 import SatelliteVisualisation from "@esveo/satellite-visualisation";
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Button } from "./Button";
+import { Button } from "./lib/base-components/Button";
 import {
   createSatellite,
   deleteSatellite,
@@ -9,9 +9,10 @@ import {
   Satellite,
   SatelliteCreateInput,
   updateSatellite,
-} from "./satelliteApi";
-import { SatelliteForm } from "./SatelliteForm";
-import { SatelliteSelect } from "./SatelliteSelect";
+} from "./lib/satellites/satelliteApi";
+import { SatelliteForm } from "./lib/satellites/SatelliteForm";
+import { SatelliteSelect } from "./lib/satellites/SatelliteSelect";
+import { TopNav } from "./TopNav";
 
 export function App() {
   const [satellites, setSatellites] = useState<Satellite[] | null>(null);
@@ -50,26 +51,31 @@ export function App() {
 
   return (
     <div className="satellite-control-app">
-      <div className="satellite-select">
-        <SatelliteSelect
-          selectedSatelliteId={selectedSatelliteId}
-          onChange={setSelectedSatelliteId}
-          satellites={satellites ?? []}
-        />
-        <Button onClick={() => setSelectedSatelliteId(null)}>Create new</Button>
-      </div>
-      <div className="satellite-details">
-        <SatelliteForm
-          onSave={handleSave}
-          satellite={selectedSatellite}
-          onDelete={handleDelete}
-        />
-      </div>
-      <div className="satellite-visualisation">
-        <SatelliteVisualisation
-          satellites={satellites ?? []}
-          selectedSatelliteId={selectedSatelliteId}
-        />
+      <TopNav></TopNav>
+      <div className="satellite-main">
+        <div className="satellite-select">
+          <SatelliteSelect
+            selectedSatelliteId={selectedSatelliteId}
+            onChange={setSelectedSatelliteId}
+            satellites={satellites ?? []}
+          />
+          <Button onClick={() => setSelectedSatelliteId(null)}>
+            Create new
+          </Button>
+        </div>
+        <div className="satellite-details">
+          <SatelliteForm
+            onSave={handleSave}
+            satellite={selectedSatellite}
+            onDelete={handleDelete}
+          />
+        </div>
+        <div className="satellite-visualisation">
+          <SatelliteVisualisation
+            satellites={satellites ?? []}
+            selectedSatelliteId={selectedSatelliteId}
+          />
+        </div>
       </div>
     </div>
   );
