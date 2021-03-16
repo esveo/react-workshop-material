@@ -1,6 +1,17 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+
+const topicBase = path.join(__dirname, "./src/topics");
+const topicDirectoryNames = fs.readdirSync(topicBase);
+
+const topicApps = topicDirectoryNames.map((name) => ({
+  name,
+  baseUrl: `/${name}`,
+  entry: path.join(topicBase, name, "index.tsx"),
+  html: path.join(topicBase, name, "index.html"),
+}));
 
 const apps = [
   {
@@ -9,12 +20,7 @@ const apps = [
     entry: "./src/app/index.tsx",
     html: "./src/app/index.html",
   },
-  {
-    name: "use-effect--use-memo--use-callback",
-    baseUrl: "/use-effect--use-memo--use-callback",
-    entry: "./src/topics/use-effect--use-memo--and--use-callback/index.tsx",
-    html: "./src/topics/use-effect--use-memo--and--use-callback/index.html",
-  },
+  ...topicApps,
 ];
 
 const entries = {};
