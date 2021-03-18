@@ -26,5 +26,6 @@ module.exports = {
     "@typescript-eslint/no-var-requires": 0,
     "react/no-unescaped-entities": 0,
     "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-empty-function": 0,
   },
 };

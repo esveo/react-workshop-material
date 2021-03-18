@@ -19,7 +19,8 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "immer": "^8.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "ws": "^7.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",

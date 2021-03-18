@@ -1,4 +1,6 @@
-const http = require('http');
+const http = require("http");
+const WebSocket = require("ws");
+const Crypto = require("crypto");
 
 const requestDelay = 1000;
 const handlers = [
@@ -7,7 +9,7 @@ const handlers = [
     urlPattern: /satellites\/.+/i,
     handler: (req, res) => {
       const id = req.url.match(/satellites\/(.+)/)[1];
-      const satellite = dummyData.find(s => s.id === id);
+      const satellite = dummyData.find((s) => s.id === id);
       if (!satellite) {
         return fail(res, 404, `No satellite with id ${id}`);
       }
@@ -15,7 +17,7 @@ const handlers = [
         res.write(JSON.stringify(satellite));
         res.end();
       }, requestDelay);
-    }
+    },
   },
   {
     methodPattern: /get/i,
@@ -25,7 +27,7 @@ const handlers = [
         res.write(JSON.stringify(dummyData));
         res.end();
       }, requestDelay);
-    }
+    },
   },
   {
     methodPattern: /post/i,
@@ -36,13 +38,20 @@ const handlers = [
           console.error(err);
           return fail(res, 400, String(err));
         }
+        if (dummyData.length > 50) {
+          return fail(
+            res,
+            400,
+            "You cannot store more than 50 satellites. Delete some before adding new ones."
+          );
+        }
         const { name, type, angle, reverse } = data;
-        if (typeof name !== 'string') {
-          return fail(res, 400, 'Name is a required field.');
+        if (typeof name !== "string") {
+          return fail(res, 400, "Name is a required field.");
         }
         if (
-          typeof type !== 'string' ||
-          !['science', 'military', 'communication'].includes(type)
+          typeof type !== "string" ||
+          !["science", "military", "communication"].includes(type)
         ) {
           return fail(
             res,
@@ -50,18 +59,18 @@ const handlers = [
             'Type must be one of "science", "military" and "communication".'
           );
         }
-        if (typeof angle !== 'number' || angle < 0 || angle > 360) {
-          return fail(res, 400, 'Angle must be a number between 0 and 360');
+        if (typeof angle !== "number" || angle < 0 || angle > 360) {
+          return fail(res, 400, "Angle must be a number between 0 and 360");
         }
-        if (typeof reverse !== 'boolean') {
-          return fail(res, 400, 'Reverse must be a boolean');
+        if (typeof reverse !== "boolean") {
+          return fail(res, 400, "Reverse must be a boolean");
         }
         const newSatellite = {
           id: (Math.random(9999999) * 1000000).toFixed(0),
           name,
           angle,
           type,
-          reverse
+          reverse,
         };
         dummyData.push(newSatellite);
         setTimeout(() => {
@@ -70,14 +79,14 @@ const handlers = [
           res.end();
         }, requestDelay);
       });
-    }
+    },
   },
   {
     methodPattern: /put/i,
     urlPattern: /satellites\/\d+/i,
     handler: (req, res) => {
       const id = req.url.match(/satellites\/(.+)/)[1];
-      const satellite = dummyData.find(s => s.id === id);
+      const satellite = dummyData.find((s) => s.id === id);
       if (!satellite) {
         return fail(res, 404, `No satellite with id ${id}`);
       }
@@ -87,12 +96,12 @@ const handlers = [
           return fail(res, 400, String(err));
         }
         const { name, type, angle, reverse } = data;
-        if (typeof name !== 'string') {
-          return fail(res, 400, 'Name is a required field.');
+        if (typeof name !== "string") {
+          return fail(res, 400, "Name is a required field.");
         }
         if (
-          typeof type !== 'string' ||
-          !['science', 'military', 'communication'].includes(type)
+          typeof type !== "string" ||
+          !["science", "military", "communication"].includes(type)
         ) {
           return fail(
             res,
@@ -100,17 +109,17 @@ const handlers = [
             'Type must be one of "science", "military" and "communication".'
           );
         }
-        if (typeof angle !== 'number' || angle < 0 || angle > 360) {
-          return fail(res, 400, 'Angle must be a number between 0 and 360.');
+        if (typeof angle !== "number" || angle < 0 || angle > 360) {
+          return fail(res, 400, "Angle must be a number between 0 and 360.");
         }
-        if (typeof reverse !== 'boolean') {
-          return fail(res, 400, 'Reverse must be a boolean');
+        if (typeof reverse !== "boolean") {
+          return fail(res, 400, "Reverse must be a boolean");
         }
         Object.assign(satellite, {
           name,
           angle,
           type,
-          reverse
+          reverse,
         });
         setTimeout(() => {
           res.write(JSON.stringify(satellite));
@@ -118,14 +127,14 @@ const handlers = [
           res.end();
         }, requestDelay);
       });
-    }
+    },
   },
   {
     methodPattern: /delete/i,
     urlPattern: /satellites\/\d+/i,
     handler: (req, res) => {
       const id = req.url.match(/satellites\/(.+)/)[1];
-      const satellite = dummyData.find(s => s.id === id);
+      const satellite = dummyData.find((s) => s.id === id);
       if (!satellite) {
         return fail(res, 404, `No satellite with id ${id}`);
       }
@@ -135,71 +144,124 @@ const handlers = [
         res.statusCode = 200;
         res.end();
       }, requestDelay);
-    }
+    },
   },
   {
     methodPattern: /.*/,
     urlPattern: /.*/,
     handler: (req, res) => {
       res.statusCode = 404;
-      res.write(JSON.stringify('Backend running'));
+      res.write(JSON.stringify("Backend running"));
       res.end();
-    }
-  }
+    },
+  },
 ];
 
 const dummyData = [
   {
-    id: '0',
-    name: 'International Space Station',
-    type: 'science',
+    id: "0",
+    name: "International Space Station",
+    type: "science",
     angle: 15,
-    reverse: false
+    reverse: false,
   },
   {
-    id: '1',
-    name: 'Hubble Space Telescope',
-    type: 'science',
+    id: "1",
+    name: "Hubble Space Telescope",
+    type: "science",
     angle: 40,
-    reverse: true
+    reverse: true,
   },
   {
-    id: '2',
-    name: 'GoldenEye',
-    type: 'military',
+    id: "2",
+    name: "GoldenEye",
+    type: "military",
     angle: 66,
-    reverse: true
+    reverse: true,
   },
   {
-    id: '4',
-    name: 'Galaxy 14',
-    type: 'communication',
+    id: "4",
+    name: "Galaxy 14",
+    type: "communication",
     angle: 110,
-    reverse: false
+    reverse: false,
   },
   {
-    id: '5',
-    name: 'GPS IIR-11',
-    type: 'communication',
+    id: "5",
+    name: "GPS IIR-11",
+    type: "communication",
     angle: 135,
-    reverse: true
-  }
+    reverse: true,
+  },
 ];
 
-const server = new http.Server((req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Request-Method', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'OPTIONS,GET,POST,DELETE,PUT');
-  res.setHeader('Access-Control-Allow-Headers', '*');
-  if (req.method === 'OPTIONS') {
+const wss = new WebSocket.Server({ noServer: true });
+
+/**
+ * @type {{  id: string, socket: WebSocket, dead: boolean }[]}
+ */
+let sockets = [];
+wss.on("connection", (socket) => {
+  const id = Crypto.randomBytes(32).toString("base64").slice(0, 32);
+  const connection = { id, socket, dead: false };
+  const welcomeMessage = { type: "NEW_CONNECTION", id };
+  console.log("new connection", id);
+
+  sockets.forEach((s) =>
+    socket.send(JSON.stringify({ type: "NEW_CONNECTION", id: s.id }))
+  );
+
+  sockets.forEach((s) => s.socket.send(JSON.stringify(welcomeMessage)));
+
+  sockets.push(connection);
+
+  socket.on("message", (data) => {
+    console.log("new message", data);
+    sockets.forEach((s) => s.socket.send(data));
+  });
+
+  socket.on("pong", () => (connection.dead = false));
+
+  socket.on("close", () => {
+    console.log("connection closed", id);
+
+    sockets = sockets.filter((s) => s.id !== id);
+    sockets.forEach((s) =>
+      s.socket.send(JSON.stringify({ type: "CONNECTION_CLOSED", id }))
+    );
+  });
+  socket.on("error", () => socket.terminate());
+});
+
+setInterval(() => {
+  let i = 0;
+  console.log("validating connections");
+  for (const s of sockets) {
+    if (s.dead) {
+      i++;
+      s.socket.terminate();
+    } else {
+      s.dead = true;
+      s.socket.ping("ping");
+    }
+  }
+  console.log(`validating connections done, connections closed: ${i}`);
+}, 10000);
+
+const server = new http.Server((req, res, ...rest) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Request-Method", "*");
+  res.setHeader("Access-Control-Allow-Methods", "OPTIONS,GET,POST,DELETE,PUT");
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  if (req.method === "OPTIONS") {
     res.writeHead(204);
     res.end();
     return;
   }
 
-  res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Content-Type", "application/json");
 
-  const handler = handlers.find(h => {
+  const handler = handlers.find((h) => {
     return !!req.method.match(h.methodPattern) && !!req.url.match(h.urlPattern);
   });
 
@@ -207,18 +269,24 @@ const server = new http.Server((req, res) => {
     handler.handler(req, res);
   } catch (err) {
     console.error(err);
-    fail(res, 500, 'Unknown error');
+    fail(res, 500, "Unknown error");
   }
 });
 
+server.on("upgrade", (request, socket, head) => {
+  wss.handleUpgrade(request, socket, head, function done(ws) {
+    wss.emit("connection", ws, request);
+  });
+});
+
 server.listen(3002);
-console.log('Server listening on port 3002');
+console.log("Server listening on port 3002");
 
 function getPayload(req, callback) {
   let buffer = Buffer.alloc(0);
-  req.on('data', data => (buffer = Buffer.concat([buffer, data])));
-  req.on('end', () => {
-    const payload = buffer.toString('utf-8');
+  req.on("data", (data) => (buffer = Buffer.concat([buffer, data])));
+  req.on("end", () => {
+    const payload = buffer.toString("utf-8");
     try {
       callback(null, (payload && JSON.parse(payload)) || {});
     } catch (err) {
