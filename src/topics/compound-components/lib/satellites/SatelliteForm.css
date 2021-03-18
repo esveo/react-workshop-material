@@ -1,0 +1,11 @@
+.satellite-form h1 {
+  font-size: 1.1em;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+.satellite-form--actions {
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+}

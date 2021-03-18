@@ -1,0 +1,28 @@
+.form--field-wrapper {
+  margin-bottom: 22px;
+}
+
+.form--field-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form--field-wrapper input[type="checkbox"] {
+  height: 16px;
+  transform: translateY(2px);
+  width: 16px;
+}
+.form--field-wrapper input[type="range"] {
+  display: block;
+  width: 100%;
+}
+.form--field-wrapper input[type="text"] {
+  display: block;
+  font: inherit;
+  padding: 2px 4px;
+  width: 100%;
+}
+.form--field-wrapper select {
+  font: inherit;
+  padding: 2px 4px;
+}

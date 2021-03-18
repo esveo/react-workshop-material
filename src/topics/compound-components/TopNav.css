@@ -1,0 +1,23 @@
+.top-nav {
+  height: 4rem;
+  background: #104474;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-menu-button {
+  background: transparent;
+  border: 0;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.top-nav-clock {
+  padding: 0.5rem;
+}

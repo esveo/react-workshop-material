@@ -6,6 +6,15 @@
     },
     {
       "path": "./src/topics/use-effect--use-memo--and--use-callback"
+    },
+    {
+      "path": "./src/topics/compound-components"
+    },
+    {
+      "path": "./src/topics/render-props"
+    },
+    {
+      "path": "./src/topics/use-reducer"
     }
   ]
 }
