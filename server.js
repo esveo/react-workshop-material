@@ -1,6 +1,5 @@
 const http = require("http");
 const WebSocket = require("ws");
-const Crypto = require("crypto");
 
 const requestDelay = 1000;
 const handlers = [
@@ -198,44 +197,87 @@ const dummyData = [
 const wss = new WebSocket.Server({ noServer: true });
 
 /**
- * @type {{  id: string, socket: WebSocket, dead: boolean }[]}
+ * @type {{  username: string | null, socket: WebSocket, dead: boolean }[]}
  */
 let sockets = [];
 wss.on("connection", (socket) => {
-  const id = Crypto.randomBytes(32).toString("base64").slice(0, 32);
-  const connection = { id, socket, dead: false };
-  const welcomeMessage = { type: "NEW_CONNECTION", id };
-  console.log("new connection", id);
+  const connection = { username: null, socket, dead: false };
 
-  sockets.forEach((s) =>
-    socket.send(JSON.stringify({ type: "NEW_CONNECTION", id: s.id }))
-  );
-
-  sockets.forEach((s) => s.socket.send(JSON.stringify(welcomeMessage)));
+  // sockets.forEach((s) => s.socket.send(JSON.stringify(welcomeMessage)));
 
   sockets.push(connection);
 
   socket.on("message", (data) => {
-    console.log("new message", data);
-    sockets.forEach((s) => s.socket.send(data));
+    try {
+      const parsed = JSON.parse(data);
+      if (parsed.type === "CONNECT" && typeof parsed.username === "string") {
+        connection.username = parsed.username;
+        for (const s of sockets) {
+          if (s.socket === socket) continue;
+          s.socket.send(
+            JSON.stringify({
+              type: "NEW_CONNECTION",
+              username: connection.username,
+            })
+          );
+        }
+
+        for (const s of sockets) {
+          if (!s.username || s.socket === socket) continue;
+          socket.send(
+            JSON.stringify({
+              type: "NEW_CONNECTION",
+              username: s.username,
+            })
+          );
+        }
+      } else if (!connection.username) {
+        socket.send(
+          JSON.stringify({
+            type: "ERROR",
+            message:
+              "Setup your username with `CONNECT` before sending messages",
+          })
+        );
+      } else {
+        for (const s of sockets) {
+          if (s.socket === socket) continue;
+          s.socket.send(data);
+        }
+      }
+    } catch (err) {
+      socket.send(
+        JSON.stringify({
+          type: "ERROR",
+          message: "Recieved invalid message format. Has to be JSON",
+        })
+      );
+    }
   });
 
   socket.on("pong", () => (connection.dead = false));
 
   socket.on("close", () => {
-    console.log("connection closed", id);
+    sockets = sockets.filter((s) => s.socket !== socket);
 
-    sockets = sockets.filter((s) => s.id !== id);
-    sockets.forEach((s) =>
-      s.socket.send(JSON.stringify({ type: "CONNECTION_CLOSED", id }))
-    );
+    if (connection.username) {
+      for (const s of sockets) {
+        if (s.socket === socket) continue;
+        s.socket.send(
+          JSON.stringify({
+            type: "CONNECTION_CLOSED",
+            username: connection.username,
+          })
+        );
+      }
+    }
   });
   socket.on("error", () => socket.terminate());
 });
 
 setInterval(() => {
   let i = 0;
-  console.log("validating connections");
+  log("validating connections");
   for (const s of sockets) {
     if (s.dead) {
       i++;
@@ -245,7 +287,7 @@ setInterval(() => {
       s.socket.ping("ping");
     }
   }
-  console.log(`validating connections done, connections closed: ${i}`);
+  log(`validating connections done, connections closed: ${i}`);
 }, 10000);
 
 const server = new http.Server((req, res, ...rest) => {
@@ -280,7 +322,7 @@ server.on("upgrade", (request, socket, head) => {
 });
 
 server.listen(3002);
-console.log("Server listening on port 3002");
+log("Server listening on port 3002");
 
 function getPayload(req, callback) {
   let buffer = Buffer.alloc(0);
@@ -299,4 +341,8 @@ function fail(res, code, reason) {
   res.statusCode = code;
   res.write(JSON.stringify(reason));
   res.end();
+}
+
+function log(...args) {
+  console.log(new Date().toISOString(), ...args);
 }

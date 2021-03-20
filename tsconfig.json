@@ -15,6 +15,9 @@
     },
     {
       "path": "./src/topics/use-reducer"
+    },
+    {
+      "path": "./src/topics/web-sockets"
     }
   ]
 }
