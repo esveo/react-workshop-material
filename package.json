@@ -9,7 +9,8 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack build --mode=production",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "watch:types": "tsc -b -w -i"
   },
   "browserslist": "last 2 Chrome versions",
   "dependencies": {

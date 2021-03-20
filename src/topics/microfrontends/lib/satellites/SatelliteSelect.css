@@ -1,0 +1,21 @@
+.satellite-select-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+  flex: 1 1 auto;
+}
+
+.satellite-select-list li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.satellite-select-list li:hover {
+  background: #313343;
+}
+
+.satellite-select-list li.__selected {
+  background: #186ab3;
+}
