@@ -2,6 +2,7 @@ import SatelliteVisualisation from "@esveo/satellite-visualisation";
 import { useEffect, useReducer, useState } from "react";
 import "./App.css";
 import { Button } from "./lib/base-components/Button";
+import { ChatWidget } from "./lib/live-chat/ChatWidget";
 import {
   createSatellite,
   deleteSatellite,
@@ -78,6 +79,7 @@ export function App() {
           />
         </div>
       </div>
+      <ChatWidget />
     </div>
   );
 }
