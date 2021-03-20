@@ -2,15 +2,13 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "typescript",
-      "tsconfig": "tsconfig.json",
-      "option": "watch",
-      "problemMatcher": ["$tsc-watch"],
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
+      "type": "npm",
+      "script": "watch:types",
       "group": "build",
-      "label": "tsc: watch - tsconfig.json"
+      "problemMatcher": ["$tsc-watch"],
+      "label": "npm: watch:types",
+      "detail": "tsc -b -w -i",
+      "runOptions": { "runOn": "folderOpen" }
     }
   ]
 }
