@@ -43,5 +43,11 @@ export function satelliteReducer(
           s.id === action.satellite.id ? action.satellite : s
         ),
       };
+    default:
+      assertNever(action);
   }
+}
+
+function assertNever(value: never): never {
+  throw new Error("Should never happen");
 }
