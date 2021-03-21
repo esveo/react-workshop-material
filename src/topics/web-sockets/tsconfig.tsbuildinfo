@@ -292,7 +292,7 @@
         "affectsGlobalScope": false
       },
       "./lib/live-chat/usechat.ts": {
-        "version": "7bb1ecef6d764b7e6a4d97468ce42653a750a164836fd60b54a75e59c5789afd",
+        "version": "2ccc263d41b30e068ffaa22a48c6648bde54aa915458bf3251537a508e6a63c9",
         "signature": "57eb0e4f1eb470374bda11c35f4df803640f3e6fc6ec371428641e87a7c23b65",
         "affectsGlobalScope": false
       },

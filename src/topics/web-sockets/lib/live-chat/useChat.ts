@@ -11,7 +11,7 @@ export function useChat(
   onMessage: (message: ChatMessageToClient) => void
 ): { send: (message: ChatMessageFromClient) => void } {
   const ws = useWebSocket<ChatWebSocketProtocol>(
-    "ws://localhost:3002",
+    "wss://esveo-academy-react-workshop.herokuapp.com/",
     onMessage
   );
 
