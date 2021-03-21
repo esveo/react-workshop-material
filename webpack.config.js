@@ -58,7 +58,7 @@ config.module = {
         options: {
           plugins: [
             process.env.NODE_ENV !== "production" && "react-refresh/babel",
-          ],
+          ].filter(Boolean),
         },
       },
     },
