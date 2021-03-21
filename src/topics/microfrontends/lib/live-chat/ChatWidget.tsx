@@ -2,20 +2,22 @@ import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "../base-components/Button";
 import "./ChatWidget.css";
 
-export function ChatWidget() {
+export function ChatWidget(props: { username: string }) {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="chat-widget">
-      {open && <Chat />}
+      {open && <Chat {...props} />}
       <Button onClick={() => setOpen((o) => !o)}>
-        {open ? "Hide" : "Show"} Chat
+        {open ? "Hide" : "Show"} Chat: {props.username}
       </Button>
     </div>
   );
 }
 
-function Chat() {
+export type ChatWidget = typeof ChatWidget;
+
+function Chat(props: { username: string }) {
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
   const listRef = useRef<HTMLUListElement>(null);

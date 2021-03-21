@@ -18,6 +18,9 @@
     },
     {
       "path": "./src/topics/web-sockets"
+    },
+    {
+      "path": "./src/topics/microfrontends"
     }
   ]
 }

@@ -1,8 +1,9 @@
 import SatelliteVisualisation from "@esveo/satellite-visualisation";
-import { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Button } from "./lib/base-components/Button";
-import { ChatWidget } from "./lib/live-chat/ChatWidget";
+import type { ChatWidget } from "./lib/live-chat/ChatWidget";
+import { createRemoteComponent } from "./lib/microfrontends/createRemoteComponent";
 import {
   createSatellite,
   deleteSatellite,
@@ -78,7 +79,16 @@ export function App() {
           />
         </div>
       </div>
-      <ChatWidget />
+      <Suspense fallback={"Loading!"}>
+        <LazyChatWidget username="Microfrontend!" />
+      </Suspense>
     </div>
   );
 }
+
+const LazyChatWidget = createRemoteComponent<ChatWidget>({
+  url: "/runtime-modules/chat/chat-widget.js",
+  libraryName: "chat_widget",
+  moduleName: "./ChatWidget",
+  exportedName: "ChatWidget",
+});
