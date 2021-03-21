@@ -2,16 +2,18 @@
   "name": "react-workshops-material",
   "version": "1.0.0",
   "description": "Workshop Material for various esveo Academy React workshops",
-  "main": "index.js",
+  "main": "server.js",
   "author": "esveo Academy",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack serve --mode=development",
+    "start": "node ./server.js",
+    "watch": "webpack serve --mode=development",
     "build": "webpack build --mode=production",
     "lint": "eslint ./src",
     "watch:types": "tsc -b -w -i",
-    "build-chat": "webpack --mode=production -c ./src/topics/microfrontends/lib/live-chat/webpack.chat-widget.config.js"
+    "build-chat": "webpack --mode=production -c ./src/topics/microfrontends/lib/live-chat/webpack.chat-widget.config.js",
+    "deploy": "git push heroku master"
   },
   "browserslist": "last 2 Chrome versions",
   "dependencies": {

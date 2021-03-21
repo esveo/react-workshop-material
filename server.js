@@ -321,8 +321,9 @@ server.on("upgrade", (request, socket, head) => {
   });
 });
 
-server.listen(3002);
-log("Server listening on port 3002");
+const port = process.env.PORT || 3002;
+server.listen(port);
+log("Server listening on port port");
 
 function getPayload(req, callback) {
   let buffer = Buffer.alloc(0);
