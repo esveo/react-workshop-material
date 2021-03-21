@@ -55,7 +55,11 @@ config.module = {
       exclude: /node_modules/,
       use: {
         loader: "babel-loader",
-        options: { plugins: ["react-refresh/babel"] },
+        options: {
+          plugins: [
+            process.env.NODE_ENV !== "production" && "react-refresh/babel",
+          ],
+        },
       },
     },
     {
@@ -105,7 +109,9 @@ config.plugins.push(
   })
 );
 
-config.plugins.push(new ReactRefreshPlugin());
+if (process.env.NODE_ENV !== "production") {
+  config.plugins.push(new ReactRefreshPlugin());
+}
 
 config.target = "web";
 
