@@ -272,23 +272,8 @@
         "affectsGlobalScope": false
       },
       "./lib/live-chat/chatwidget.tsx": {
-        "version": "aa92e600a50ffff247d24849fe4388f1e3218bd270d80e18c0026ff25372b4e1",
-        "signature": "9ea9c64ecbebb0580fa05487f59be42144bbf34d77629871ae2d34b220560d20",
-        "affectsGlobalScope": false
-      },
-      "./lib/microfrontends/loadscript.ts": {
-        "version": "62599c0acd4400df097edfc0d91b1e02f110571bb07ac37e9b90890ff399a9e4",
-        "signature": "ab9867b491fa73a2d8c96b3b0ef95cd32fe15833fcce761ed907a2ecb5f09bf0",
-        "affectsGlobalScope": false
-      },
-      "./lib/microfrontends/loadremotemodule.ts": {
-        "version": "4958540461495366db2d2abaef64c9192afa5560b795e9944361b5fd145503fd",
-        "signature": "33f3c63ca6dd9aab5fd74ee6331d81a3f2b6e1e2fea06f16fa96a436e3fee42a",
-        "affectsGlobalScope": false
-      },
-      "./lib/microfrontends/createremotecomponent.tsx": {
-        "version": "d3e45962ee352097321f49200a9921903133763ae91ffe1e7170e994400aaf10",
-        "signature": "f4353526a4e8efa0eefeb1a2fad36d588c6e8ade3ed5e39c4a7dc2c1c0878207",
+        "version": "4e1c9ea87db16c6f248cb7c9f50084d7ae4de7b221514a612d3e16e3e96a5e4a",
+        "signature": "e91b1822e9749df34d034d488f84fe35de70d379e48f10f9247a1269ed4f5049",
         "affectsGlobalScope": false
       },
       "./lib/satellites/satelliteapi.ts": {
@@ -296,8 +281,23 @@
         "signature": "0019a02af7ebbfe8cb8ae80bb88863cf834526bf0ed10dca157d49aa6b2b1e8f",
         "affectsGlobalScope": false
       },
+      "./lib/data-image/getimagedataurl.ts": {
+        "version": "1c6d5b843c4e4a24580794dee58c81f16679b74159aec9a039172716f8bdb820",
+        "signature": "58faadcdf4109569050cc36b72bd1cd72dadc80f81961675079610b86186c826",
+        "affectsGlobalScope": false
+      },
+      "./lib/data-image/usesuspendingimagesrc.ts": {
+        "version": "2c070d84d023575f026669406999ce03f22a6746e3e274d6b92d86549066c808",
+        "signature": "78dcc2ac57efeb1ee3cce140b63f6f8dfa8e9569bb0093fa0bb655e858574694",
+        "affectsGlobalScope": false
+      },
+      "./lib/data-image/suspenseimage.tsx": {
+        "version": "6a132caebd9fcbb2f868cc2c2477213aaf84cb01896eed4deab6346c57567f98",
+        "signature": "57c87b12c3a4d3b1048525523a357159d65370922f6d4533d0200a251eda855a",
+        "affectsGlobalScope": false
+      },
       "./lib/satellites/satelliteform.tsx": {
-        "version": "7679636b4f89c544d287873716555c8bbd4dfdf91b9918d559fb26d762cdc9a5",
+        "version": "8afe6a0e096fb05eeb25daaf0de3284257ad38cf233b0c0f59e1dccf6605ebb5",
         "signature": "e2bf160178cf3c5b751162c9dd6382bdaa22f5afe95360e6bb89df95ea6db23c",
         "affectsGlobalScope": false
       },
@@ -332,7 +332,7 @@
         "affectsGlobalScope": false
       },
       "./app.tsx": {
-        "version": "c454f505e51c41073883d44e333544d5d29c933d37f86edb696d161b19376939",
+        "version": "b968cde4a873151eb43feba587f390c313b1316efd5d14878845bce78c47c886",
         "signature": "0d9a67cfdeaee1c34af399182a2508149c4efe0a4ac9a6f660d9a92f3134d109",
         "affectsGlobalScope": false
       },
@@ -341,8 +341,18 @@
         "signature": "5e7837730e7ef63981cbd8d878388c4b37acc70dc3190881e230a23e3b4f9514",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/@types/react-dom/experimental.d.ts": {
+        "version": "4a3dec0c2023ec348a9b21a2ae44c031890789ad875668ace40d6fcdcce150b4",
+        "signature": "4a3dec0c2023ec348a9b21a2ae44c031890789ad875668ace40d6fcdcce150b4",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/react/experimental.d.ts": {
+        "version": "dea22fb1ac6054ec092027a5b98b352886e00f2f496a67227fa776335c0765f2",
+        "signature": "dea22fb1ac6054ec092027a5b98b352886e00f2f496a67227fa776335c0765f2",
+        "affectsGlobalScope": false
+      },
       "./index.tsx": {
-        "version": "3fdf87e2ec9ec28339cf6ca1a842b03febc4f7bcdd7e54049087b77506b4181d",
+        "version": "343cca8adca598e0b886f72530c99c845e7c29b0de7e6108ab1f0ff40ae3ec9a",
         "signature": "46eab1ce06d5094b93f5b43496834c413802711c5340aad1e1bbdb9e318810f3",
         "affectsGlobalScope": false
       },
@@ -910,7 +920,14 @@
         "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/zlib.d.ts"
       ],
+      "../../../node_modules/@types/react-dom/experimental.d.ts": [
+        "../../../node_modules/@types/react-dom/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
       "../../../node_modules/@types/react-dom/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@types/react/experimental.d.ts": [
         "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react/index.d.ts": [
@@ -924,14 +941,15 @@
         "../../globals.d.ts",
         "./lib/base-components/button.tsx",
         "./lib/live-chat/chatwidget.tsx",
-        "./lib/microfrontends/createremotecomponent.tsx",
         "./lib/satellites/satelliteapi.ts",
         "./lib/satellites/satelliteform.tsx",
         "./lib/satellites/satelliteselect.tsx",
         "./topnav.tsx"
       ],
       "./index.tsx": [
+        "../../../node_modules/@types/react-dom/experimental.d.ts",
         "../../../node_modules/@types/react-dom/index.d.ts",
+        "../../../node_modules/@types/react/experimental.d.ts",
         "./app.tsx"
       ],
       "./lib/base-components/button.tsx": [
@@ -940,6 +958,13 @@
       "./lib/base-components/link.tsx": [
         "../../../node_modules/@types/react/index.d.ts"
       ],
+      "./lib/data-image/suspenseimage.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "./lib/data-image/usesuspendingimagesrc.ts"
+      ],
+      "./lib/data-image/usesuspendingimagesrc.ts": [
+        "./lib/data-image/getimagedataurl.ts"
+      ],
       "./lib/live-chat/chatwebsocketprotocol.ts": [
         "./lib/web-sockets/types.ts"
       ],
@@ -947,16 +972,10 @@
         "../../../node_modules/@types/react/index.d.ts",
         "./lib/base-components/button.tsx"
       ],
-      "./lib/microfrontends/createremotecomponent.tsx": [
-        "../../../node_modules/@types/react/index.d.ts",
-        "./lib/microfrontends/loadremotemodule.ts"
-      ],
-      "./lib/microfrontends/loadremotemodule.ts": [
-        "./lib/microfrontends/loadscript.ts"
-      ],
       "./lib/satellites/satelliteform.tsx": [
         "../../../node_modules/@types/react/index.d.ts",
         "./lib/base-components/button.tsx",
+        "./lib/data-image/suspenseimage.tsx",
         "./lib/satellites/satelliteapi.ts"
       ],
       "./lib/satellites/satelliteselect.tsx": [
@@ -1221,7 +1240,14 @@
         "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/zlib.d.ts"
       ],
+      "../../../node_modules/@types/react-dom/experimental.d.ts": [
+        "../../../node_modules/@types/react-dom/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
       "../../../node_modules/@types/react-dom/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@types/react/experimental.d.ts": [
         "../../../node_modules/@types/react/index.d.ts"
       ],
       "../../../node_modules/@types/react/index.d.ts": [
@@ -1236,12 +1262,11 @@
       "./lib/base-components/link.tsx": [
         "../../../node_modules/@types/react/index.d.ts"
       ],
+      "./lib/data-image/suspenseimage.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
       "./lib/live-chat/chatwebsocketprotocol.ts": [
         "./lib/web-sockets/types.ts"
-      ],
-      "./lib/microfrontends/createremotecomponent.tsx": [
-        "../../../node_modules/@types/react/index.d.ts",
-        "./lib/microfrontends/loadremotemodule.ts"
       ],
       "./lib/satellites/satelliteform.tsx": [
         "./lib/satellites/satelliteapi.ts"
@@ -1310,7 +1335,9 @@
       "../../../node_modules/@types/node/worker_threads.d.ts",
       "../../../node_modules/@types/node/zlib.d.ts",
       "../../../node_modules/@types/prop-types/index.d.ts",
+      "../../../node_modules/@types/react-dom/experimental.d.ts",
       "../../../node_modules/@types/react-dom/index.d.ts",
+      "../../../node_modules/@types/react/experimental.d.ts",
       "../../../node_modules/@types/react/global.d.ts",
       "../../../node_modules/@types/react/index.d.ts",
       "../../../node_modules/@types/scheduler/index.d.ts",
@@ -1368,11 +1395,11 @@
       "./index.tsx",
       "./lib/base-components/button.tsx",
       "./lib/base-components/link.tsx",
+      "./lib/data-image/getimagedataurl.ts",
+      "./lib/data-image/suspenseimage.tsx",
+      "./lib/data-image/usesuspendingimagesrc.ts",
       "./lib/live-chat/chatwebsocketprotocol.ts",
       "./lib/live-chat/chatwidget.tsx",
-      "./lib/microfrontends/createremotecomponent.tsx",
-      "./lib/microfrontends/loadremotemodule.ts",
-      "./lib/microfrontends/loadscript.ts",
       "./lib/satellites/satelliteapi.ts",
       "./lib/satellites/satelliteform.tsx",
       "./lib/satellites/satelliteselect.tsx",
@@ -1626,6 +1653,10 @@
         1
       ],
       [
+        "../../../node_modules/@types/react/experimental.d.ts",
+        1
+      ],
+      [
         "../../../node_modules/@types/react/global.d.ts",
         1
       ],
@@ -1698,27 +1729,23 @@
         1
       ],
       [
+        "./lib/data-image/getimagedataurl.ts",
+        1
+      ],
+      [
+        "./lib/data-image/suspenseimage.tsx",
+        1
+      ],
+      [
+        "./lib/data-image/usesuspendingimagesrc.ts",
+        1
+      ],
+      [
         "./lib/live-chat/chatwebsocketprotocol.ts",
         1
       ],
       [
         "./lib/live-chat/chatwidget.tsx",
-        1
-      ],
-      [
-        "./lib/microfrontends/createremotecomponent.tsx",
-        1
-      ],
-      [
-        "./lib/microfrontends/loadremotemodule.ts",
-        1
-      ],
-      [
-        "./lib/microfrontends/loadscript.ts",
-        1
-      ],
-      [
-        "./lib/microfrontends/remotecomponent.tsx",
         1
       ],
       [

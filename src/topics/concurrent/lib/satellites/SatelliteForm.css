@@ -1,0 +1,65 @@
+.satellite-form h1 {
+  font-size: 1.1em;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+.satellite-form--field-wrapper {
+  margin-bottom: 22px;
+}
+
+.satellite-form--field-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.satellite-form--field-wrapper input[type='checkbox'] {
+  height: 16px;
+  transform: translateY(2px);
+  width: 16px;
+}
+.satellite-form--field-wrapper input[type='range'] {
+  display: block;
+  width: 100%;
+}
+.satellite-form--field-wrapper input[type='text'] {
+  display: block;
+  font: inherit;
+  padding: 2px 4px;
+  width: 100%;
+}
+.satellite-form--field-wrapper select {
+  font: inherit;
+  padding: 2px 4px;
+}
+
+.satellite-form--actions {
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+}
+
+/*
+
+
+
+
+const Icon = styled(FontAwesomeIcon)`
+  display: inline-block;
+  font-size: 64%;
+  margin-right: 12px;
+
+  && {
+    width: 22px;
+  }
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+
+  button {
+    margin-right: 20px;
+  }
+` */

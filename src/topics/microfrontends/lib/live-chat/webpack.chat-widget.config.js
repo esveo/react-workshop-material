@@ -51,11 +51,11 @@ config.plugins = [
         shareKey: "react", // under this name the shared module will be placed in the share scope
         shareScope: "default", // share scope with this name will be used
         singleton: true, // only a single version of the shared module is allowed
-        requiredVersion: "^17.0.0",
+        requiredVersion: "^0.0.0-experimental-7d06b80af",
       },
       "react-dom": {
         singleton: true, // only a single version of the shared module is allowed
-        requiredVersion: "^17.0.0",
+        requiredVersion: "^0.0.0-experimental-7d06b80af",
       },
     },
   }),

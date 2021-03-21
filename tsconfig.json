@@ -21,6 +21,9 @@
     },
     {
       "path": "./src/topics/microfrontends"
+    },
+    {
+      "path": "./src/topics/concurrent"
     }
   ]
 }

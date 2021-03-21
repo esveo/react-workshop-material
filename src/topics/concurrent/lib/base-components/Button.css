@@ -1,0 +1,25 @@
+.satellite-control-button {
+  background: #104474;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 16px;
+}
+
+.satellite-control-button:hover {
+  background: #165fa1;
+}
+
+.satellite-control-button:active {
+  background: #2f84ce;
+}
+.satellite-control-button:disabled {
+  background: #333d47;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.satellite-control-button + .satellite-control-button {
+  margin-left: 16px;
+}
