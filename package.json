@@ -13,7 +13,7 @@
     "lint": "eslint ./src",
     "watch:types": "tsc -b -w -i",
     "build-chat": "webpack --mode=production -c ./src/topics/microfrontends/lib/live-chat/webpack.chat-widget.config.js",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku main"
   },
   "browserslist": "last 2 Chrome versions",
   "dependencies": {
