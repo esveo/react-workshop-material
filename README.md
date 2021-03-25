@@ -34,6 +34,11 @@ SatellitesSelect based on a common list component with generics and strategy pat
 
 We will write a very simple form library to show case the possibilities of compound components.
 
+### Error handling
+
+How to handle errors in synchronous and asynchronous code.
+How can we add type safety to errors?
+
 ### WebSockets: Typesafe Protocols & imperative APIs
 
 Live Chat component, that connects to a running web socket.
@@ -52,6 +57,12 @@ Integrate an image per satellite id that suspends loading until the image is ful
 
 This repository is setup to work with [Emotion.js](https://emotion.sh/docs/introduction) as a CSS-in-JS solution.
 If you want, you can do all your styling work with plain css (not css-modules or scss is currently set up) or with Emotion.
+
+For better syntax highlighting install the styled components extension:
+
+- VSCode: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
+- IntelliJ / WebStorm: https://plugins.jetbrains.com/plugin/9997-styled-components--styled-jsx
+-
 
 #### The css prop:
 

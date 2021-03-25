@@ -17,12 +17,13 @@
 function useEffect(effect: EffectCallback, deps?: DependencyList): void;
 ```
 
+<!--
 
 
 
 
 
-
+ -->
 
 ### useMemo
 
@@ -38,10 +39,13 @@ function useMemo<T>(factory: () => T, deps: DependencyList | undefined): T;
 
 **note**: useMemo is no guarantee! React may decide to recompute a value at any time.
 
+<!--
 
 
 
 
+
+ -->
 
 ### useCallback
 
@@ -53,15 +57,19 @@ function useMemo<T>(factory: () => T, deps: DependencyList | undefined): T;
  * @version 16.8.0
  * @see https://reactjs.org/docs/hooks-reference.html#usecallback
  */
-function useCallback<T extends (...args: any[]) => any>(callback: T, deps: DependencyList): T;
+function useCallback<T extends (...args: any[]) => any>(
+  callback: T,
+  deps: DependencyList
+): T;
 ```
 
+<!--
 
 
 
 
 
-
+ -->
 
 ## Goal: We want the clock in the upper right hand corner to be up to date.
 
@@ -76,6 +84,14 @@ function useCallback<T extends (...args: any[]) => any>(callback: T, deps: Depen
   - What happens when we don't provide the locale in the dependency array?
 
 **This cleanup logic is tedious. Let's build a custom hook that helps us!**
+
+<!--
+
+
+
+
+
+ -->
 
 ### Task 2:
 

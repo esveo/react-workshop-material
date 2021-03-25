@@ -29,11 +29,15 @@ function ButtonWithHistory() {
 }
 ```
 
+<!--
 
 
 
 
 
+
+
+ -->
 
 **Example with a reducer**
 
@@ -91,6 +95,7 @@ function ButtonWithHistory() {
 }
 ```
 
+<!--
 
 
 
@@ -98,7 +103,7 @@ function ButtonWithHistory() {
 
 
 
-
+ -->
 
 ## API
 
@@ -122,6 +127,7 @@ function useReducer<R extends Reducer<any, any>>(
 ): [ReducerState<R>, Dispatch<ReducerAction<R>>];
 ```
 
+<!--
 
 
 
@@ -129,8 +135,7 @@ function useReducer<R extends Reducer<any, any>>(
 
 
 
-
-
+ -->
 
 ## Exercise 1: Goal: We want to handle our satellites in a reducer
 
@@ -149,6 +154,7 @@ function useReducer<R extends Reducer<any, any>>(
   - What happens when we add other action types
   - What are the advantages and disadvantages in passing around dispatch instead of specific functions for update/delete etc.
 
+<!--
 
 
 
@@ -156,8 +162,7 @@ function useReducer<R extends Reducer<any, any>>(
 
 
 
-
-
+ -->
 
 ## Tips & Tricks
 
@@ -166,7 +171,6 @@ function useReducer<R extends Reducer<any, any>>(
 We know all allowed action types, so that we should be able to make sure, that we handle all possible actions in our reducer, even if we add another action type. After checking all possible options in a union type, we can safely assign the result to never. TypeScript will now complain, when we add another option to the union type.
 
 ```tsx
-
 /**
  * Return type is still inferred as HistoryButtonState
  * because default branch returns `never`
@@ -201,6 +205,7 @@ function assertNever(value: never): never {
 }
 ```
 
+<!--
 
 
 
@@ -208,7 +213,7 @@ function assertNever(value: never): never {
 
 
 
-
+ -->
 
 ### immer for ergonomic updates
 
@@ -239,15 +244,6 @@ function historyReducer(
   });
 }
 ```
-
-
-
-
-
-
-
-
-
 
 ## Exercise 2: Improving your reducer
 

@@ -4,14 +4,57 @@
 - In order to create a UI on the basis of some JSX, we have to return it from render
 - It does not matter where the JSX originated:
 
+```
+|--------------------|
+|        App         |
+|--------------------|
+          |
+          |  --> Props (including embedding JSX)
+         \|/
+          '
+|--------------------|
+|        Lib         |
+|--------------------|
 
 
 
 
 
 
+
+|--------------------|
+|        App         |
+|--------------------|
+          |
+          |  --> Props (including embedding JSX & a render prop!)
+         \|/
+          '
+|--------------------|
+|        Lib         |
+|--------------------|
+          |
+          |  --> Passes data to app code via the render prop
+         \|/
+          '
+|--------------------|
+|        App         |
+|--------------------|
+
+
+```
+
+<!--
+
+
+
+
+
+
+
+ -->
 
 **Previously: the children prop**
+
 ```tsx
 function CounterButton(props: { children: ReactNode }) {
   const [counter, setCounter] = useState(0);
@@ -28,6 +71,7 @@ function App() {
 }
 ```
 
+<!--
 
 
 
@@ -35,6 +79,7 @@ function App() {
 
 
 
+ -->
 
 **Better alternative: A prop that returns JSX (render prop)**
 
@@ -54,12 +99,15 @@ function App() {
 }
 ```
 
+<!--
 
 
 
 
 
 
+
+ -->
 
 ## Exercise 1: Making the SatelliteSelect more flexible
 
@@ -82,17 +130,11 @@ function App() {
   - What additional features could be handled by the SatelliteList?
   - How could we make SatelliteList even more generic and reusable?
 
-
-
-
-
-
-
-
 ### Optional Task 2: Virtualized scrolling
 
 - Integrate [react-window](https://react-window.now.sh/#/examples/list/fixed-size) into the SatelliteList component
 
+<!--
 
 
 
@@ -100,17 +142,11 @@ function App() {
 
 
 
+ -->
 
 # Generic components
 
 Problem: Wrapper components often don't know on which type of data they operate. Typing these may become hard and you may be inclined to fall back to `any`/`unknown`
-
-
-
-
-
-
-
 
 ## Example use case: `ForEach`
 
@@ -136,6 +172,7 @@ function ForEach<TItem>(props: {
 }
 ```
 
+<!--
 
 
 
@@ -143,6 +180,7 @@ function ForEach<TItem>(props: {
 
 
 
+ -->
 
 ## Exercise 2: Refactoring SatelliteList
 
@@ -156,13 +194,6 @@ function ForEach<TItem>(props: {
 - Use this `GenericList` in your SatelliteSelect component
 - Move `GenericList` to `src/app/lib/base-components` as this is now a completely reusable component
 
-
-
-
-
-
-
-
 ### Optional Task 2
 
 - Integrate a text filter into `GenericList` and let users decide if a given item matches the current filter.
@@ -170,6 +201,3 @@ function ForEach<TItem>(props: {
 ### Optional Task 3
 
 - Build a GenericSelect component, that uses GenericList internally and attaches required props and classes to manage the selection state
-
-
-
