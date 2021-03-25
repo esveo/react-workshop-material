@@ -2,6 +2,14 @@
 
 This repository is intended to be used as guiding material for React Workshops.
 
+## TLDR
+
+- `git clone https://github.com/esveo/react-workshop-material`
+- `cd react-workshop-material`
+- `yarn`
+- `yarn watch`
+- `yarn watch:types` if your IDE does not automatically run the task and if you need project wide type checking.
+
 ## Folder structure
 
 - `/src/app`: The base application that attendants can use to complete the exercises of various topics.
