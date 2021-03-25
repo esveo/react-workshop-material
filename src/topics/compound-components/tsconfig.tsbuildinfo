@@ -266,6 +266,46 @@
         "signature": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
         "affectsGlobalScope": true
       },
+      "../../../node_modules/@emotion/utils/types/index.d.ts": {
+        "version": "4b46f4712ae966996b2cc81949d482063887c55478706e25d942482a44b99b71",
+        "signature": "4b46f4712ae966996b2cc81949d482063887c55478706e25d942482a44b99b71",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/serialize/types/index.d.ts": {
+        "version": "93b24ca76698e62732d72800da132367639a4426363c821338bbbd7cf6b64443",
+        "signature": "93b24ca76698e62732d72800da132367639a4426363c821338bbbd7cf6b64443",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/cache/types/index.d.ts": {
+        "version": "71c1350814b0e0683b2725e5eb7d44abf44944d23d5b9ca215cd7e0efe0496e2",
+        "signature": "71c1350814b0e0683b2725e5eb7d44abf44944d23d5b9ca215cd7e0efe0496e2",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts": {
+        "version": "ecfa9ce3a5a37d15b813065e8a7cdf677a0f493018e47ce59815443dfbb9c910",
+        "signature": "ecfa9ce3a5a37d15b813065e8a7cdf677a0f493018e47ce59815443dfbb9c910",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/react/types/helper.d.ts": {
+        "version": "83e56d3337e1a6dbafdbe5a2502a84c330b1a328ed2860d689b2ded82b1f5c95",
+        "signature": "83e56d3337e1a6dbafdbe5a2502a84c330b1a328ed2860d689b2ded82b1f5c95",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/react/types/theming.d.ts": {
+        "version": "e630f8a3c49d5db0a8af774799abdb8f19675b940a6cfa25eca35e5280709f28",
+        "signature": "e630f8a3c49d5db0a8af774799abdb8f19675b940a6cfa25eca35e5280709f28",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/react/types/index.d.ts": {
+        "version": "413c03b679ca5bbe6456b8a38ac999fffb3834d0e4a9638bd186533d629ab8cb",
+        "signature": "413c03b679ca5bbe6456b8a38ac999fffb3834d0e4a9638bd186533d629ab8cb",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@emotion/react/types/css-prop.d.ts": {
+        "version": "91813cab02c60e7be541f2e08fc06ae817b408dd3bf6d53c6380e5369d412b96",
+        "signature": "91813cab02c60e7be541f2e08fc06ae817b408dd3bf6d53c6380e5369d412b96",
+        "affectsGlobalScope": false
+      },
       "./lib/base-components/button.tsx": {
         "version": "9c823a21472cd48955740db3b37d33a58f1b63ae0c1c0c0a17c3be49d18b5e84",
         "signature": "ab2021ed349f570c51e3f867e500babe03bfc0b3853ce200d2417303a31dade9",
@@ -277,7 +317,7 @@
         "affectsGlobalScope": false
       },
       "./lib/satellites/satelliteapi.ts": {
-        "version": "8925bc6903b594f6ff3b9d243b5490ca69b74f6a50ba528f8251dba61e401c36",
+        "version": "3b0f3a2102f6de7f11c9d43d39c18c2d1279936386024be104dde3a9a869080f",
         "signature": "0019a02af7ebbfe8cb8ae80bb88863cf834526bf0ed10dca157d49aa6b2b1e8f",
         "affectsGlobalScope": false
       },
@@ -626,6 +666,11 @@
         "signature": "6767cce098e1e6369c26258b7a1f9e569c5467d501a47a090136d5ea6e80ae6d",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/@types/parse-json/index.d.ts": {
+        "version": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
+        "signature": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
+        "affectsGlobalScope": false
+      },
       "../../../node_modules/@types/scheduler/index.d.ts": {
         "version": "3169db033165677f1d414baf0c82ba27801089ca1b66d97af464512a47df31b5",
         "signature": "3169db033165677f1d414baf0c82ba27801089ca1b66d97af464512a47df31b5",
@@ -648,6 +693,39 @@
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
+      "../../../node_modules/@emotion/cache/types/index.d.ts": [
+        "../../../node_modules/@emotion/utils/types/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/css-prop.d.ts": [
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/helper.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/index.d.ts": [
+        "../../../node_modules/@emotion/cache/types/index.d.ts",
+        "../../../node_modules/@emotion/react/types/helper.d.ts",
+        "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts",
+        "../../../node_modules/@emotion/react/types/theming.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts": [
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/theming.d.ts": [
+        "../../../node_modules/@emotion/react/types/helper.d.ts",
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/serialize/types/index.d.ts": [
+        "../../../node_modules/@emotion/utils/types/index.d.ts",
+        "../../../node_modules/csstype/index.d.ts"
+      ],
       "../../../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": [
         "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
       ],
@@ -956,6 +1034,39 @@
       ]
     },
     "exportedModulesMap": {
+      "../../../node_modules/@emotion/cache/types/index.d.ts": [
+        "../../../node_modules/@emotion/utils/types/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/css-prop.d.ts": [
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/helper.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/index.d.ts": [
+        "../../../node_modules/@emotion/cache/types/index.d.ts",
+        "../../../node_modules/@emotion/react/types/helper.d.ts",
+        "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts",
+        "../../../node_modules/@emotion/react/types/theming.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts": [
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/react/types/theming.d.ts": [
+        "../../../node_modules/@emotion/react/types/helper.d.ts",
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../../node_modules/@emotion/serialize/types/index.d.ts": [
+        "../../../node_modules/@emotion/utils/types/index.d.ts",
+        "../../../node_modules/csstype/index.d.ts"
+      ],
       "../../../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": [
         "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
       ],
@@ -1238,6 +1349,14 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../../../node_modules/@emotion/cache/types/index.d.ts",
+      "../../../node_modules/@emotion/react/types/css-prop.d.ts",
+      "../../../node_modules/@emotion/react/types/helper.d.ts",
+      "../../../node_modules/@emotion/react/types/index.d.ts",
+      "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts",
+      "../../../node_modules/@emotion/react/types/theming.d.ts",
+      "../../../node_modules/@emotion/serialize/types/index.d.ts",
+      "../../../node_modules/@emotion/utils/types/index.d.ts",
       "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts",
       "../../../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
       "../../../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
@@ -1296,6 +1415,7 @@
       "../../../node_modules/@types/node/wasi.d.ts",
       "../../../node_modules/@types/node/worker_threads.d.ts",
       "../../../node_modules/@types/node/zlib.d.ts",
+      "../../../node_modules/@types/parse-json/index.d.ts",
       "../../../node_modules/@types/prop-types/index.d.ts",
       "../../../node_modules/@types/react-dom/index.d.ts",
       "../../../node_modules/@types/react/global.d.ts",
@@ -1366,6 +1486,42 @@
       "./topnav.tsx"
     ],
     "affectedFilesPendingEmit": [
+      [
+        "../../../node_modules/@emotion/cache/types/index.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/css-prop.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/helper.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/index.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/jsx-namespace.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/jsx-runtime.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/react/types/theming.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/serialize/types/index.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/@emotion/utils/types/index.d.ts",
+        1
+      ],
       [
         "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts",
         1
@@ -1599,6 +1755,10 @@
         1
       ],
       [
+        "../../../node_modules/@types/parse-json/index.d.ts",
+        1
+      ],
+      [
         "../../../node_modules/@types/prop-types/index.d.ts",
         1
       ],
@@ -1627,7 +1787,55 @@
         1
       ],
       [
+        "../../../node_modules/typescript/lib/lib.dom.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.dom.iterable.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.core.d.ts",
+        1
+      ],
+      [
         "../../../node_modules/typescript/lib/lib.es2015.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
         1
       ],
       [
@@ -1639,7 +1847,51 @@
         1
       ],
       [
+        "../../../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2017.object.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2017.string.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+        1
+      ],
+      [
         "../../../node_modules/typescript/lib/lib.es2018.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2019.array.d.ts",
         1
       ],
       [
@@ -1647,7 +1899,47 @@
         1
       ],
       [
+        "../../../node_modules/typescript/lib/lib.es2019.object.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2019.string.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+        1
+      ],
+      [
         "../../../node_modules/typescript/lib/lib.es2020.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.intl.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.promise.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.string.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.es5.d.ts",
         1
       ],
       [
@@ -1656,6 +1948,30 @@
       ],
       [
         "../../../node_modules/typescript/lib/lib.esnext.full.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.esnext.intl.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.esnext.promise.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.esnext.string.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.esnext.weakref.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.scripthost.d.ts",
+        1
+      ],
+      [
+        "../../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
         1
       ],
       [

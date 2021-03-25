@@ -1,5 +1,8 @@
 {
-  "files": ["./src/globals.d.ts"],
+  "files": [
+    "./src/globals.d.ts",
+    "node_modules/@emotion/react/types/css-prop.d.ts"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 

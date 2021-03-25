@@ -1,5 +1,5 @@
 {
-  "plugins": ["@babel/plugin-proposal-class-properties"],
+  "plugins": ["@emotion", "@babel/plugin-proposal-class-properties"],
   "presets": [
     "@babel/preset-env",
     [
@@ -8,6 +8,7 @@
         "runtime": "automatic"
       }
     ],
-    "@babel/preset-typescript"
+    "@babel/preset-typescript",
+    "@emotion/babel-preset-css-prop"
   ]
 }
