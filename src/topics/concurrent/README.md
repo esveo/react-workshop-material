@@ -47,14 +47,6 @@ export async function getImageDataUrl(src: string): Promise<string> {
 }
 ```
 
-<!--
-
-
-
-
-
- -->
-
 ### Task 2
 
 - Use `getImageData` in your form to download the dataurl of the current src.

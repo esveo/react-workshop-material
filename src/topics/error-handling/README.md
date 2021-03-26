@@ -156,6 +156,7 @@ async function launchApp() {
   await sleep(1000);
 
   [1, 2, 3].forEach(async (x) => {
+    throw new Error("boom?");
     // Not propagated, since forEach does not care about a returned promise
     await asyncFunc();
   });
@@ -310,13 +311,6 @@ React won't handle any other errors for you! You have to do this yourself.
   - `ERROR`
 - Type the state variable (or reducer state) as a union of all those possible options
 - Adapt your component so that all states are handled
-
-<!--
-
-
-
-
- -->
 
 #### Task 2 (if not already done)
 
