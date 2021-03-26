@@ -73,6 +73,21 @@ export async function getImageDataUrl(src: string): Promise<string> {
 
 [Docs](https://reactjs.org/docs/code-splitting.html#reactlazy)
 
+### Exercise 3
+
+#### Task 1
+
+- Define a new lazy component "LazySatelliteVisualisation" inside of `App.tsx` with `React.lazy`
+- Use this new lazy component inside of the `App` component and add the `Suspense` boundary with a sufficient fallback
+
+<!--
+
+
+
+
+
+ -->
+
 It would be nice if we could make use of this feature for data loading.
 
 How does suspense + React.lazy work?
@@ -117,7 +132,7 @@ Pitfalls:
 #### Task 1
 
 - Create new file `src/apps/libs/data-image/useSuspendingImageSrc.ts`
-- Create a variable: `const imageCache = new Map<string, { loadingPromise: Promise<string>, dataUrl: string | null }>()`
+- Create a global variable: `const imageCache = new Map<string, { loadingPromise: Promise<string>, dataUrl: string | null }>()`
 - Implement a new custom hook `function useSuspendingImageSrc(src: string): string`
 - This hook checks the imageCache:
 

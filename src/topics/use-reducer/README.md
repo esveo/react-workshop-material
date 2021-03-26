@@ -12,7 +12,7 @@ function ButtonWithHistory() {
 
   function increment() {
     setCounter(counter + 1);
-    setHistory(counter);
+    setHistory([...history, counter]);
   }
 
   function undo() {
@@ -252,3 +252,23 @@ function historyReducer(
 - Make sure to use `assertNever` as an exhaustivenes check in your reducer.
 - Check that you get a type error, when you add another additional action.
 - Use immer's `produce` to rewrite your reducer with safe mutations.
+
+## Optional Exercise: Testing your reducer
+
+### Task 1:
+
+- Create a new file `/lib/satellites/satellitesReducer.test.ts`
+- Add an empty Test shell:
+
+```ts
+describe("satellitesReducer", () => {
+  it("Should pass", () => {
+    expect(true).toBe(true);
+  });
+});
+```
+
+- Run `yarn test` or `yarn test --watch`
+- Implement tests for your reducer:
+  - Check that `SATELLITE_CREATED` adds the satellite to the state
+  - Make sure, that the reducer throws an error on invalid actions

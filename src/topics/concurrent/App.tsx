@@ -1,5 +1,6 @@
-import SatelliteVisualisation from "@esveo/satellite-visualisation";
-import {
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {
   Suspense,
   unstable_useDeferredValue,
   useEffect,
@@ -82,13 +83,19 @@ export function App() {
           </Suspense>
         </div>
         <div className="satellite-visualisation">
-          <SatelliteVisualisation
-            satellites={satellites ?? []}
-            selectedSatelliteId={selectedSatelliteId}
-          />
+          <Suspense fallback={<FontAwesomeIcon icon={faSpinner} spin />}>
+            <LazySatelliteVisualisation
+              satellites={satellites ?? []}
+              selectedSatelliteId={selectedSatelliteId}
+            />
+          </Suspense>
         </div>
       </div>
       <ChatWidget />
     </div>
   );
 }
+
+const LazySatelliteVisualisation = React.lazy(
+  () => import("@esveo/satellite-visualisation")
+);

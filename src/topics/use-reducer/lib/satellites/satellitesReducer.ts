@@ -18,7 +18,7 @@ type SatelliteReducerAction =
       satellite: Satellite;
     };
 
-type SatelliteReducerState = {
+export type SatelliteReducerState = {
   satellites: Satellite[];
 };
 

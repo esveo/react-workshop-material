@@ -306,6 +306,26 @@
         "signature": "91813cab02c60e7be541f2e08fc06ae817b408dd3bf6d53c6380e5369d412b96",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts": {
+        "version": "817d5aa402adb6203737088f8aa2fd5db6e6a0053187a4ed742215087b314210",
+        "signature": "817d5aa402adb6203737088f8aa2fd5db6e6a0053187a4ed742215087b314210",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts": {
+        "version": "dcfb5bbe5f43237024d7fed3b4d82f615ac512a274c9811affd818818d75b926",
+        "signature": "dcfb5bbe5f43237024d7fed3b4d82f615ac512a274c9811affd818818d75b926",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": {
+        "version": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
+        "signature": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@fortawesome/react-fontawesome/index.d.ts": {
+        "version": "786093bf8792839268d761ac49e641a7bba644744f9d6b5cd9d7e1f0b40efb13",
+        "signature": "786093bf8792839268d761ac49e641a7bba644744f9d6b5cd9d7e1f0b40efb13",
+        "affectsGlobalScope": false
+      },
       "./lib/base-components/button.tsx": {
         "version": "9c823a21472cd48955740db3b37d33a58f1b63ae0c1c0c0a17c3be49d18b5e84",
         "signature": "ab2021ed349f570c51e3f867e500babe03bfc0b3853ce200d2417303a31dade9",
@@ -346,33 +366,13 @@
         "signature": "f3d41044b9372eae359fbbc6250b274f05600604b8fdcffccb4b3dfb8bc6768a",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/@fortawesome/fontawesome-common-types/index.d.ts": {
-        "version": "817d5aa402adb6203737088f8aa2fd5db6e6a0053187a4ed742215087b314210",
-        "signature": "817d5aa402adb6203737088f8aa2fd5db6e6a0053187a4ed742215087b314210",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts": {
-        "version": "dcfb5bbe5f43237024d7fed3b4d82f615ac512a274c9811affd818818d75b926",
-        "signature": "dcfb5bbe5f43237024d7fed3b4d82f615ac512a274c9811affd818818d75b926",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": {
-        "version": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
-        "signature": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/@fortawesome/react-fontawesome/index.d.ts": {
-        "version": "786093bf8792839268d761ac49e641a7bba644744f9d6b5cd9d7e1f0b40efb13",
-        "signature": "786093bf8792839268d761ac49e641a7bba644744f9d6b5cd9d7e1f0b40efb13",
-        "affectsGlobalScope": false
-      },
       "./topnav.tsx": {
         "version": "230bf13c4217062f6eabeba70a90b7f30d85c6e938741af2f1ad9af327fab958",
         "signature": "2ac8e8de4a3378e5e71e7303e7261af0138c7ce8b26a715ed016b1418507ccfe",
         "affectsGlobalScope": false
       },
       "./app.tsx": {
-        "version": "b968cde4a873151eb43feba587f390c313b1316efd5d14878845bce78c47c886",
+        "version": "19cefd4203a8ee3ced8b5ef85f6789f3fba90af9ecef4adfed0b4c5fe4897d83",
         "signature": "0d9a67cfdeaee1c34af399182a2508149c4efe0a4ac9a6f660d9a92f3134d109",
         "affectsGlobalScope": false
       },
@@ -1017,6 +1017,8 @@
         "../../../node_modules/csstype/index.d.ts"
       ],
       "./app.tsx": [
+        "../../../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
+        "../../../node_modules/@fortawesome/react-fontawesome/index.d.ts",
         "../../../node_modules/@types/react/index.d.ts",
         "../../globals.d.ts",
         "./lib/base-components/button.tsx",
