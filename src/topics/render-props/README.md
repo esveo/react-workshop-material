@@ -67,7 +67,11 @@ function CounterButton(props: { children: ReactNode }) {
 }
 
 function App() {
-  return <CounterButton>You clicked X times</CounterButton>;
+  return (
+    <CounterButton>
+      <h1>You clicked X times</h1>
+    </CounterButton>
+  );
 }
 ```
 
@@ -84,18 +88,22 @@ function App() {
 **Better alternative: A prop that returns JSX (render prop)**
 
 ```tsx
-function CounterButton(props: { children: (data: number) => ReactNode }) {
+function CounterButton(props: { renderContent: (data: number) => ReactNode }) {
   const [counter, setCounter] = useState(0);
 
   return (
     <button onClick={() => setCounter(counter + 1)}>
-      {props.children(counter)}
+      {props.renderContent(counter)}
     </button>
   );
 }
 
 function App() {
-  return <CounterButton>{(c) => <>You clicked {c} times.</>}</CounterButton>;
+  return (
+    <CounterButton
+      renderContent={(c) => <>You clicked {c} times.</>}
+    ></CounterButton>
+  );
 }
 ```
 
@@ -196,7 +204,7 @@ function ForEach<TItem>(props: {
 
 ### Optional Task 2
 
-- Integrate a text filter into `GenericList` and let users decide if a given item matches the current filter.
+- Integrate a text filter into `GenericList` and let users (Application Code) decide if a given item matches the current filter.
 
 ### Optional Task 3
 
