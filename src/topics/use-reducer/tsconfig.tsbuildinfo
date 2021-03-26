@@ -1791,10 +1791,6 @@
         1
       ],
       [
-        "../../../node_modules/@emotion/react/types/jsx-runtime.d.ts",
-        1
-      ],
-      [
         "../../../node_modules/@emotion/react/types/theming.d.ts",
         1
       ],
@@ -2179,55 +2175,7 @@
         1
       ],
       [
-        "../../../node_modules/typescript/lib/lib.dom.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.dom.iterable.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.collection.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.core.d.ts",
-        1
-      ],
-      [
         "../../../node_modules/typescript/lib/lib.es2015.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.generator.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.promise.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
         1
       ],
       [
@@ -2239,51 +2187,7 @@
         1
       ],
       [
-        "../../../node_modules/typescript/lib/lib.es2017.intl.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2017.object.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2017.string.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-        1
-      ],
-      [
         "../../../node_modules/typescript/lib/lib.es2018.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2018.intl.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2018.promise.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2019.array.d.ts",
         1
       ],
       [
@@ -2291,47 +2195,7 @@
         1
       ],
       [
-        "../../../node_modules/typescript/lib/lib.es2019.object.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2019.string.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2019.symbol.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
-        1
-      ],
-      [
         "../../../node_modules/typescript/lib/lib.es2020.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.intl.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.promise.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.string.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.es5.d.ts",
         1
       ],
       [
@@ -2340,30 +2204,6 @@
       ],
       [
         "../../../node_modules/typescript/lib/lib.esnext.full.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.esnext.intl.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.esnext.promise.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.esnext.string.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.esnext.weakref.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.scripthost.d.ts",
-        1
-      ],
-      [
-        "../../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
         1
       ],
       [

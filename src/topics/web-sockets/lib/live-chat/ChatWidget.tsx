@@ -1,4 +1,10 @@
-import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  FormEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Button } from "../base-components/Button";
 import { ChatMessageToClient } from "./ChatWebSocketProtocol";
 import "./ChatWidget.css";
@@ -87,11 +93,17 @@ function Chat() {
 function ChatMessage(props: { message: MessageToDisplay }) {
   switch (props.message.type) {
     case "CHAT_MESSAGE":
-      return <>{props.message.content}</>;
+      return <React.Fragment>{props.message.content}</React.Fragment>;
     case "NEW_CONNECTION":
-      return <>{props.message.username} joined the chat.</>;
+      return (
+        <React.Fragment>
+          {props.message.username} joined the chat.
+        </React.Fragment>
+      );
     case "CONNECTION_CLOSED":
-      return <>{props.message.username} left the chat.</>;
+      return (
+        <React.Fragment>{props.message.username} left the chat.</React.Fragment>
+      );
     default:
       assertNever(props.message);
   }
